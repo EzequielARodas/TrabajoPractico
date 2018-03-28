@@ -1,6 +1,6 @@
 /** First Wollok example */
-object wollok {
-	method howAreYou() {
-		return 'I am Wolloktastic!'
+object prueba {
+	method comoEstas(){
+		return 'todo bien!'
 	}
 }
