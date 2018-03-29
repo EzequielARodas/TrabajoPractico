@@ -1,0 +1,41 @@
+import rolando.*
+
+test "Rolando comienza con 3 puntos basicos de lucha y 1 de hechiceria" {
+
+	assert.equals(3,rolando.valorLucha())
+	assert.equals(1,rolando.valorHechiceria())
+}
+
+test "Rolando incrementa los puntos basicos de hechiceria quedaria 3 de lucha y 2 de hechiceria" {
+
+	rolando.incrementarHechiceria()
+	assert.equals(3,rolando.valorLucha())
+	assert.equals(2,rolando.valorHechiceria())
+}
+
+test "Rolando obtiene collar divino, mas incrementarHechiceria() por lo tanto obtiene 4 puntos de lucha y 3 de hechiceria" {
+
+	rolando.incrementarHechiceria()
+	rolando.obtener(collarDivino)
+	assert.equals(4,rolando.valorLucha())
+	assert.equals(3,rolando.valorHechiceria())
+}
+
+test "Rolando obtiene collar divino, mas incrementarHechiceria() y libro de hechizos, queda con 4 de lucha y 4 de hechiceria" {
+
+	rolando.incrementarHechiceria()
+	rolando.obtener(collarDivino)
+	rolando.obtener(libroDeHechizos)
+	assert.equals(4,rolando.valorLucha())
+	assert.equals(4,rolando.valorHechiceria())
+}
+
+test "Rolando obtiene collar divino, libro de hechizos y obtener espada del destino mas incrementarHechiceria()   queda con 7 de lucha y 4 de hechiceria" {
+
+	rolando.incrementarHechiceria()
+	rolando.obtener(collarDivino)
+	rolando.obtener(libroDeHechizos)
+	rolando.obtener(espadaDelDestino)
+	assert.equals(7,rolando.valorLucha())
+	assert.equals(4,rolando.valorHechiceria())
+}

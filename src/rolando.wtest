@@ -1,0 +1,33 @@
+import rolando.*
+
+test "valor base de hechiceria de rolando " {
+
+	rolando.valorHechiceria()
+	assert.equals(1, rolando.valorHechiceria())
+
+}
+
+test "valor base de lucha de rolando" {
+
+	rolando.valorLucha()
+	assert.equals(3, rolando.valorLucha())
+
+}
+
+test "incrementar en uno el valor de lucha de rolando"{
+	
+	rolando.incrementarLucha()
+	assert.equals(4, rolando.valorLucha())
+}
+
+test "incrementar en uno el valor de hechiceria de rolando"{
+	
+	rolando.incrementarHechiceria()
+	assert.equals(2, rolando.valorHechiceria())
+}
+
+test "rolando encuentra la espada del destino"{
+	
+	rolando.obtener(espadaDelDestino)
+	assert.equals(#{espadaDelDestino}, rolando.artefactosEquipados())
+}
